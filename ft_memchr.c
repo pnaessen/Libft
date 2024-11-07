@@ -16,7 +16,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*ptr;
 	size_t				i;
-	const unsigned char	*ptr;
 
 	ptr = (const unsigned char *)s;
 	i = 0;
@@ -27,4 +26,30 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		i++;
 	}
 	return (NULL);
+}
+#include <stdio.h>
+
+int main(void)
+{
+    const char str[] = "Hello, world";
+    char ch = 'o';
+    size_t len = 12;
+
+    void *result 
+
+	result = ft_memchr(str, ch, len);
+
+    if (result != NULL)
+        printf("Trouvé '%c' à  %p\n", ch, result);
+    else
+        printf(" '%c'pas  trouvé.\n", ch);
+
+    ch = 'z';
+    result = ft_memchr(str, ch, len);
+
+    if (result != NULL)
+        printf("Trouvé '%c'à %p\n", ch, result);
+    else
+        printf("'%c' pas trouvé.\n", ch);
+    return 0;
 }

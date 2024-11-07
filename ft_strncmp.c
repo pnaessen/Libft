@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	int	i;
 
 	i = 0;
-	while (s1[i] || s2[i] && (i < n))
+	while (i < n) && (s1[i] || s2[i])
 	{
 		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
@@ -25,3 +25,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+#include <stdio.h>
+
+int main(void)
+{
+    char *str1 = "Hello";
+    char *str2 = "HelLo";
+    size_t n = 4;
+
+    int result = ft_strncmp(str1, str2, n);
+    printf("Result: %d\n", result);
+    return 0;
+}
+

@@ -27,3 +27,21 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
+#include <stdio.h>
+
+int main(void)
+{
+    char *str = "Hello, World";
+    int start = 7;
+    size_t len = 5;
+
+    char *substr = ft_substr(str, start, len);
+    if (substr)
+    {
+        printf("%s\n", substr);
+        free(substr);
+	}
+    else
+        printf("Malloc fail\n");
+    return 0;
+}

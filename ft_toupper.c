@@ -18,3 +18,12 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
+#include <stdio.h>
+
+int main(void)
+{
+    char c1 = 'a';
+
+    printf("'%c' > '%c'\n", c1, ft_toupper(c1));
+    return 0;
+}

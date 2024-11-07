@@ -14,31 +14,39 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
-	int	j;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
 
+	dst_len = 0;
+	src_len = 0;
+	while (dst[dst_len] != '\0' && dst_len < size)
+		dst_len++;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (dst_len == size)
+		return (size + src_len);
 	i = 0;
-	j = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j < size)
+	while (src[i] != '\0' && (dst_len + i + 1) < size)
 	{
-		dst[i] = src[j];
-		j++;
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (i);
+	if (dst_len + i < size)
+		dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
-/*#include <stdio.h>
-#include <bsd/string.h>
+#include <stdio.h>
 
-int	main(void)
+int main(void)
 {
-	char dst[] = "la lune";
-	char dddd[]="la lune";
-	int size = 20;
-	char src[] = " est un fruit";
-printf("lele=%lu dest= %s, vrai =
-	%lu",ft_strlcat(dst,src,size),dst,strlcat(dddd,src,size));
-}*/
+    char dst[20] = "Hello ";
+    const char *src = "world";
+    size_t size = 15;
+
+    size_t len = ft_strlcat(dst, src, size);
+    printf("Chaine: %s\n", dst);
+    printf("Taille: %zu\n", len);
+
+    return 0;
+}

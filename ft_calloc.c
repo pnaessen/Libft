@@ -28,16 +28,21 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 /*#include <stdio.h>
 int	main(void)
- {
+{
 	int n;
 	int j;
+	char *ptr;
 
 	n = 0;
 	j = 10;
-	ft_calloc(j, 10);
-	while (n < 10)
+	ptr = ft_calloc(j, sizeof(char));
+	if (!ptr)
+		return (1);
+	while (n < j)
 	{
-		printf("%c\n ", ptr[n]);
+		printf("%d\n", ptr[n]); 
 		n++;
 	}
- }*/
+	free(ptr);
+	return (0);
+}

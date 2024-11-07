@@ -21,12 +21,23 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	if (d == s || d[i] == '\0' && s[i] == '\0')
+	if (d == s)
 		return (dst);
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
-		return (dst);
 	}
+	return (dst);
+}
+#include <stdio.h>
+int main(void)
+{
+    char src[] = "Hello, world";
+    char dst[20];
+
+    ft_memcpy(dst, src, 13);
+    printf("Source: %s\n", src);
+    printf("Destination: %s\n", dst);
+    return 0;
 }

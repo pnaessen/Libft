@@ -20,7 +20,7 @@ int	ft_isascii(int c)
 		return (0);
 }
 /*#include <stdio.h>
-int	main(i)
+int	main()
 {
 		int i = -1;
 		while (i < 129)

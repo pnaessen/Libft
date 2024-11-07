@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,10 +22,13 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-/*#include <stdio.h>
-int	main(void)
-{
-	char *str = "Test";
+#include <stdio.h>
 
-	printf("Taille = %d", ft_strlen(str));
-}*/
+int main(void)
+{
+	char *str = "Hello";
+    size_t len = ft_strlen(str);
+    printf("Taille '%s': %zu\n", str, len);
+    return 0;
+}
+

@@ -15,15 +15,30 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
 	while (s[i] != '\0')
-	{
 		i++;
+	while (i >= 0)
+	{
 		if (s[i] == c)
-			j = i;
+			return (s + i);
+		i--;
 	}
-	return (s + j);
+	return (NULL);
+}
+
+#include "libft.h"
+
+int main(void)
+{
+    const char *str = "Hello, World";
+    char c = 'o';
+
+    char *result = ft_strrchr(str, c);
+    if (result)
+        printf("Trouvé '%c': %s\n", c, result);
+    else
+        printf("Pas la '%c'\n", c);
+    return 0;
 }

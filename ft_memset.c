@@ -14,7 +14,7 @@
 
 void	ft_memset(void *s, int c, size_t n)
 {
-	int				i;
+	size_t	i;
 	unsigned char	*t;
 
 	i = 0;
@@ -24,4 +24,17 @@ void	ft_memset(void *s, int c, size_t n)
 		t[i] = c;
 		i++;
 	}
+}
+#include <stdio.h>
+#include "libft.h"
+
+int main(void)
+{
+    char str[20] = "Hello, world";
+
+    printf("Avant : %s\n", str);
+    ft_memset(str, '*', 5);
+    printf("Après : %s\n", str);
+
+    return 0;
 }

@@ -16,5 +16,14 @@ int	ft_tolower(int c)
 {
 	if (c > 96 && c < 123)
 		c += 32;
-	return (0);
+	return (c);
+}
+#include <stdio.h>
+
+int main(void)
+{
+    char c1 = 'A';
+
+    printf("'%c' > '%c'\n", c1, ft_tolower(c1));
+    return 0;
 }
