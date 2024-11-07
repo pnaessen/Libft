@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 07:39:56 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/06 11:46:18 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 14:59:20 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	ft_isalpha(int c)
 		return (0);
 }
 /*#include <stdio.h>
-int main()
+int	main(void)
 {
-        int i = -1;
-        while (i < 129)
-        {
-                printf("%d = %d\n", i, ft_isalpha(i));
-                i++;
-        }
+		int i = -1;
+		while (i < 129)
+		{
+				printf("%d = %d\n", i, ft_isalpha(i));
+				i++;
+		}
 }*/

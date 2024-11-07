@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:46:12 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/06 11:48:39 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 14:59:39 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 /*#include <stdio.h>
 #include <bsd/string.h>
-int main()
+
+int	main(void)
 {
 	char dst[] = "la lune";
 	char dddd[]="la lune";
 	int size = 20;
 	char src[] = " est un fruit";
-printf("lele=%lu dest= %s, vrai = %lu",ft_strlcat(dst,src,size),dst,strlcat(dddd,src,size));
+printf("lele=%lu dest= %s, vrai =
+	%lu",ft_strlcat(dst,src,size),dst,strlcat(dddd,src,size));
 }*/

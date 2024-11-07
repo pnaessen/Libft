@@ -6,36 +6,36 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:47:11 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 13:21:29 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 14:59:14 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    int i;
-    unsigned char *temp;
+	int				i;
+	unsigned char	*temp;
 
-    i = 0;
-    temp = (unsigned char *)s;
-    while (i < n)
-    {
-        temp[i] = '0';
-        i++;
-    }
+	i = 0;
+	temp = (unsigned char *)s;
+	while (i < n)
+	{
+		temp[i] = '0';
+		i++;
+	}
 }
- /*#include <stdio.h>
- int   main()
- {
-    int n;
-    char str[] = "Hello test";
+/*#include <stdio.h>
+int	main(void)
+{
+   int n;
+   char str[] = "Hello test";
 
-    n = 0;
-    ft_bzero(str, 10);
-    while (n < 10)
-    {
-        printf("%c\n ", str[n]);
-        n++;
-    }
- }*/
+   n = 0;
+   ft_bzero(str, 10);
+   while (n < 10)
+   {
+		printf("%c\n ", str[n]);
+		n++;
+   }
+}*/

@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:48:36 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/06 11:41:37 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 14:59:22 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	ft_isascii(int c)
 		return (0);
 }
 /*#include <stdio.h>
-int main(i)
+int	main(i)
 {
-        int i = -1;
-        while (i < 129)
-        {
-                printf("%d = %d\n", i, ft_isascii(i));
-                i++;
-        }
+		int i = -1;
+		while (i < 129)
+		{
+				printf("%d = %d\n", i, ft_isascii(i));
+				i++;
+		}
 }*/

@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 08:12:04 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 14:59:42 by pnaessen         ###   ########lyon.fr   */
+/*   Created: 2024/11/07 15:14:51 by pnaessen          #+#    #+#             */
+/*   Updated: 2024/11/07 15:51:57 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	char	*str;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	str = (char *)malloc(len * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (i < len)
+	{
+		str[i] = s[start + i];
 		i++;
-	return (i);
+	}
+	str[i] = '\0';
+	return (str);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	char *str = "Test";
-
-	printf("Taille = %d", ft_strlen(str));
-}*/

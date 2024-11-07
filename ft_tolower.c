@@ -6,15 +6,15 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:04:15 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/06 15:08:16 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 15:10:14 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c > 96 && c < 123)
-        c += 32;
-    return (0);    
+	if (c > 96 && c < 123)
+		c += 32;
+	return (0);
 }

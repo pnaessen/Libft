@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 07:38:32 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/06 11:46:32 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/07 14:59:19 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	ft_isalnum(int c)
 		return (0);
 }
 /*#include <stdio.h>
-int main()
+int	main(void)
 {
-        int i = -1;
-        while (i < 129)
-        {
-                printf("%d = %d\n", i, ft_isalnum(i));
-                i++;
-        }
+		int i = -1;
+		while (i < 129)
+		{
+				printf("%d = %d\n", i, ft_isalnum(i));
+				i++;
+		}
 }*/
