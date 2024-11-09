@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:46:12 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 14:59:39 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 13:20:54 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
@@ -49,4 +49,4 @@ int main(void)
     printf("Taille: %zu\n", len);
 
     return 0;
-}
+}*/

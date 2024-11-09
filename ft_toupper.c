@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:45 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 15:10:16 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 13:27:19 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
-    char c1 = 'a';
+	char c1 = 'a';
 
-    printf("'%c' > '%c'\n", c1, ft_toupper(c1));
-    return 0;
-}
+	printf("'%c' > '%c'\n", c1, ft_toupper(c1));
+	return (0);
+}*/

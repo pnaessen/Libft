@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:44:53 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 15:08:16 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 13:28:31 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*t;
 
 	i = 0;
@@ -25,16 +25,15 @@ void	ft_memset(void *s, int c, size_t n)
 		i++;
 	}
 }
-#include <stdio.h>
-#include "libft.h"
+/*#include <stdio.h>
 
 int main(void)
 {
-    char str[20] = "Hello, world";
+	char str[20] = "Hello, world";
 
-    printf("Avant : %s\n", str);
-    ft_memset(str, '*', 5);
-    printf("Après : %s\n", str);
+	printf("Avant : %s\n", str);
+	ft_memset(str, '*', 5);
+	printf("Après : %s\n", str);
 
-    return 0;
-}
+	return (0);
+}*/

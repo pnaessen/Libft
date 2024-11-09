@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:36:50 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 15:09:32 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 13:32:55 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-#include "libft.h"
+/*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    char *big = "Hello";
-    char *little = "World";
-    size_t len = 15;
+	char *big = "Hello";
+	char *little = "World";
+	size_t len = 15;
 
-    char *result = ft_strnstr(big, little, len);
-    if (result)
-        printf("Trouvé: %s\n", result);
-    else
-        printf("Pas la\n");
-    return 0;
-}
+	char *result = ft_strnstr(big, little, len);
+	if (result)
+		printf("Trouvé: %s\n", result);
+	else
+		printf("Pas la\n");
+	return (0);
+}*/

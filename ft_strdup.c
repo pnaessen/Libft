@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:18:49 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 15:08:54 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 15:03:17 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,23 +32,22 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
-    const char *str = "Hello, world";
-    char *dup_str;
+	const char *str = "Hello, world";
+	char *dup_str;
 
-    dup_str = ft_strdup(str);
+	dup_str = ft_strdup(str);
 
-    if (dup_str != NULL)
-    {
-        printf("Original : %s\n", str);
-        printf("Duplicated : %s\n", dup_str);
-        free(dup_str);
-    }
-    else
-        printf("Fail\n");
-    return 0;
-}
-
+	if (dup_str != NULL)
+	{
+		printf("Original : %s\n", str);
+		printf("Duplicated : %s\n", dup_str);
+		free(dest);
+	}
+	else
+		printf("Fail\n");
+	return (0);
+}*/

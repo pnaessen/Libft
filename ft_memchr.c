@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 07:43:55 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 15:01:11 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 15:33:40 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,29 +27,21 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    const char str[] = "Hello, world";
-    char ch = 'o';
-    size_t len = 12;
+	const char str[] = "Hello, world";
+	char ch = 'o';
+	size_t len = 12;
 
-    void *result 
+	void *result
 
 	result = ft_memchr(str, ch, len);
 
-    if (result != NULL)
-        printf("Trouvé '%c' à  %p\n", ch, result);
-    else
-        printf(" '%c'pas  trouvé.\n", ch);
-
-    ch = 'z';
-    result = ft_memchr(str, ch, len);
-
-    if (result != NULL)
-        printf("Trouvé '%c'à %p\n", ch, result);
-    else
-        printf("'%c' pas trouvé.\n", ch);
-    return 0;
-}
+	if (result != NULL)
+		printf("Trouvé '%c' à  %p\n", ch, result);
+	else
+		printf(" '%c'pas  trouvé.\n", ch);
+	return (0);
+}*/

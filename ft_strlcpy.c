@@ -6,9 +6,10 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 08:53:12 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 14:59:41 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 15:00:55 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
@@ -23,12 +24,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	if (size > 0)
 		dst[i] = '\0';
-
 	while (src[i] != '\0')
 		i++;
 	return (i);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
@@ -40,4 +40,4 @@ int main(void)
     printf("Chaine : %s\n", dst);
     printf("Taille de source: %zu\n", len);
     return 0;
-}
+}*/

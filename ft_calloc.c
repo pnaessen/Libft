@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 08:41:05 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/07 14:59:17 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/09 13:24:47 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,4 @@ int	main(void)
 	}
 	free(ptr);
 	return (0);
-}
+}*/

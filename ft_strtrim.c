@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:08:26 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 14:34:08 by pnaessen         ###   ########lyon.fr   */
+/*   Created: 2024/11/09 14:19:30 by pnaessen          #+#    #+#             */
+/*   Updated: 2024/11/09 15:00:33 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	char *str;
+	size_t i;
 
 	i = 0;
-	while (s[i] != c)
+	str = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!str)
+		return (NULL);
+	while (*s1)
 	{
-		i++;
-		if (s[i] == c)
-			return (s + i);
+		if (!ft_strchr(s1, set))
+        {
+            str[i] = *s1;
+            i++;
+        }
+        
 	}
-	return (NULL);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	const char *str = "Hello, World";
-	char c = 'o';
-
-	char *result = ft_strchr(str, c);
-	if (result)
-		printf("Trouvé '%c': %s\n", c, result);
-	else
-		printf("Pas la '%c'\n", c);
-	return (0);
 }
