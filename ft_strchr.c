@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	const char *str = "Hello, World";
@@ -38,4 +38,4 @@ int	main(void)
 	else
 		printf("Pas la '%c'\n", c);
 	return (0);
-}
+}*:

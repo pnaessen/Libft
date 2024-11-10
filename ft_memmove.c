@@ -42,7 +42,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 int main()
@@ -62,4 +62,4 @@ int main()
     memmove(overlapo + 1, overlapo, 2);
     printf("Après overlap %s\n", overlapo);
     return 0;
-}
+}*/
