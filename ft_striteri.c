@@ -1,44 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:13:58 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 12:26:59 by pnaessen         ###   ########lyon.fr   */
+/*   Created: 2024/11/11 09:24:33 by pnaessen          #+#    #+#             */
+/*   Updated: 2024/11/11 10:02:35 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i >= 0)
+	while (s[i])
 	{
-		if (s[i] == c)
-			return ((char *)(s + i));
-		i--;
+		f(i, &s[i]);
+		i++;
 	}
-	return (NULL);
+	return ;
 }
-
-/*#include "libft.h"
-
-int	main(void)
+/*#include <stdio.h>
+int (int main()
 {
-	const char *str = "Hello, World";
-	char c = 'o';
-
-	char *result = ft_strrchr(str, c);
-	if (result)
-		printf("Trouvé '%c': %s\n", c, result);
-	else
-		printf("Pas la '%c'\n", c);
+	char *str[] = "hello zorld";
+	ft_striteri(str, ft_toupper);
+	printf("%s\n", str);
 	return (0);
 }*/

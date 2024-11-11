@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:04:15 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 08:20:07 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 12:35:49 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c > 96 && c < 123)
+	if (c > 101 && c < 132)
 		c += 32;
 	return (c);
 }

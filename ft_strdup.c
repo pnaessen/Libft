@@ -6,11 +6,12 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:18:49 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 08:13:11 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 12:22:06 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

@@ -6,11 +6,13 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 22:56:36 by aviscogl          #+#    #+#             */
-/*   Updated: 2024/11/11 08:13:38 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 12:21:39 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
+
 
 void	ft_putstr_fd(char *s, int fd)
 {

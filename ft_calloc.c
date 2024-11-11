@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 08:41:05 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 08:12:23 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 12:27:51 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
 	void	*ptr;
 
-	i = 0;
 	ptr = malloc(size * nmemb);
 	if (!ptr)
 		return (NULL);

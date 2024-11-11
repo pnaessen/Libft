@@ -1,41 +1,35 @@
-# Nom de la bibliothèque
 NAME = libft.a
 
-# Dossier des fichiers source
-SRCDIR = src
+SRCS = ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
+       ft_putendl_fd.c ft_putnbr_fd.c ft_strlen.c ft_strdup.c \
+       ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strncmp.c \
+       ft_strchr.c ft_strrchr.c ft_memset.c ft_bzero.c ft_memcpy.c \
+       ft_memmove.c ft_memchr.c ft_memcmp.c ft_calloc.c ft_toupper.c \
+       ft_tolower.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+       ft_isprint.c ft_strlcpy.c
 
-# Dossier des fichiers objets
-OBJDIR = obj
+OBJS = $(SRCS:.c=.o)
 
-# Liste des fichiers sources (.c) dans le dossier src
-SRC = $(wildcard $(SRCDIR)/*.c)
-
-# Création des fichiers objets à partir des fichiers source
-OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-
-# Compilateur et options
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Iincludes
+CFLAGS = -Wall -Wextra -Werror
 
-# Commande pour créer la bibliothèque
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+AR = ar rcs
+RM = rm -f
 
-# Pour créer les fichiers objets, on utilise les fichiers sources
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Commande pour nettoyer les fichiers objets
 clean:
-	rm -rf $(OBJDIR)
+	$(RM) $(OBJS)
 
-# Commande pour supprimer les fichiers objets et la bibliothèque
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
-# Commande pour recompiler tout
-re: fclean $(NAME)
+re: fclean all
 
-# Commande pour tester la bibliothèque (optionnel)
-# .PHONY permet de ne pas créer de fichier avec ce nom
 .PHONY: all clean fclean re

@@ -6,11 +6,12 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:48:38 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 08:13:30 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 12:22:45 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	ft_word_count(const char *s, char c)
 {
@@ -42,7 +43,7 @@ char	**ft_split(const char *s, char c)
 
 	if (!s)
 		return (NULL);
-	tab = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
+	tab = malloc((ft_word_count(s, c) + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
 	i = 0;
