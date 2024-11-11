@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 08:06:49 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 13:20:12 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:14:00 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 /*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    const char s1[] = "Hello";
-    const char s2[] = "Hello";
+	const char s1[] = "Hello";
+	const char s2[] = "Hello";
 
-    printf("Resultat 1: %d\n", ft_memcmp(s1, s2, 5));
+	printf("Resultat 1: %d\n", ft_memcmp(s1, s2, 5));
 }*/

@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 08:41:05 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 13:24:47 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:12:23 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(void)
 		return (1);
 	while (n < j)
 	{
-		printf("%d\n", ptr[n]); 
+		printf("%d\n", ptr[n]);
 		n++;
 	}
 	free(ptr);

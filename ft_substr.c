@@ -6,9 +6,11 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:14:51 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 15:06:04 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:20:16 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -29,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 /*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	char *str = "Hello, World";
 	int start = 7;

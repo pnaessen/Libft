@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:44:53 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 13:28:31 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:13:52 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_memset(void *s, int c, size_t n)
 }
 /*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	char str[20] = "Hello, world";
 

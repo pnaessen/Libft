@@ -6,9 +6,11 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:04:15 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 13:29:50 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:20:07 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

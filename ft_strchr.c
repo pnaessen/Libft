@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:08:26 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 14:34:08 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:19:33 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
 /*#include <stdio.h>
 int	main(void)
 {

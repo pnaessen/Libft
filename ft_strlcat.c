@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:46:12 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 13:20:54 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:13:04 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 /*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    char dst[20] = "Hello ";
-    const char *src = "world";
-    size_t size = 15;
+	char dst[20] = "Hello ";
+	const char *src = "world";
+	size_t size = 15;
 
-    size_t len = ft_strlcat(dst, src, size);
-    printf("Chaine: %s\n", dst);
-    printf("Taille: %zu\n", len);
+	size_t len = ft_strlcat(dst, src, size);
+	printf("Chaine: %s\n", dst);
+	printf("Taille: %zu\n", len);
 
-    return 0;
+	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:19:30 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 15:00:33 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:16:54 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed = ft_substr(s1, start, end - start + 1);
 	return (trimmed);
 }
+/*#include <stdio.h>
 
-#include <stdio.h>
-
-int main()
+int	main(void)
 {
-    char s1[] = "   \t\n Hello, World \n\t   ";
-    char set[] = " \t\n";
-    char *result = ft_strtrim(s1, set);
-    printf("Result: '%s'\n", result);
-    free(result);
+	char	s1[] = "   \t\n Hello, World \n\t   ";
+	char	set[] = " \t\n";
+	char	*result;
 
-    return 0;
-}
+	result = ft_strtrim(s1, set);
+	printf("Result: '%s'\n", result);
+	free(result);
+	return (0);
+}*/

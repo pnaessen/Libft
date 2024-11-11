@@ -6,11 +6,9 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:48:38 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/09 15:05:44 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/11 08:13:30 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -69,21 +67,19 @@ char	**ft_split(const char *s, char c)
 	return (tab);
 }
 
-
-/*#include <stdio.h>
-int(main)
+/* int(main)
 {
-    char	**tab;
-    int		i;
+	char	**tab;
+	int		i;
 
-    tab = ft_split("Hello World", ' ');
-    i = 0;
-    while (tab[i] != NULL)
-    {
-        printf("%s\n", tab[i]);
-        i++;
-    }
-    free(tab);
-    return (0);
+	tab = ft_split("Hello World", ' ');
+	i = 0;
+	while (tab[i] != NULL)
+	{
+		printf("%s\n", tab[i]);
+		i++;
+	}
+	free(tab);
+	return (0);
 }
 */
