@@ -11,61 +11,75 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static size_t	ft_word_count(const char *s, char c)
+static size_t	ft_count_words(char const *str, char c)
 {
-	size_t	count;
+	size_t	word_count;
 	size_t	i;
 
-	count = 0;
+	word_count = 0;
 	i = 0;
-	while (s[i])
+	while (str[i])
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-		{
-			count++;
-			while (s[i] != c && s[i] != '\0')
-				i++;
-		}
+		if (str[i] != c && (str[i + 1] == c || str[i + 1] == '\0'))
+			word_count++;
+		i++;
 	}
-	return (count);
+	return (word_count);
 }
 
-char	**ft_split(const char *s, char c)
+static void	ft_copy_word(char *dest, char const *src, char c)
 {
-	char	**tab;
 	size_t	i;
-	size_t	j;
-	size_t	len;
 
-	if (!s)
-		return (NULL);
-	tab = malloc((ft_word_count(s, c) + 1) * sizeof(char *));
-	if (!tab)
-		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (src[i] && src[i] != c)
 	{
-		if (s[i] != c)
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+}
+
+static void	ft_allocate_words(char **result, char const *str, char c)
+{
+	size_t	word_len;
+	size_t	word_index;
+	size_t	i;
+
+	word_index = 0;
+	i = 0;
+	while (str[word_index])
+	{
+		word_len = 0;
+		while (str[word_index + word_len] && str[word_index + word_len] != c)
+			word_len++;
+		if (word_len > 0)
 		{
-			len = 0;
-			while (s[i + len] && s[i + len] != c)
-				len++;
-			tab[j] = ft_substr(s, i, len);
-			if (!tab[j])
-				return (NULL);
-			j++;
-			i += len;
+			result[i] = malloc(sizeof(char) * (word_len + 1));
+			if (!result[i])
+				return ;
+			ft_copy_word(result[i], (str + word_index), c);
+			i++;
+			word_index = word_index + word_len;
 		}
 		else
-			i++;
+			word_index++;
 	}
-	tab[j] = NULL;
-	return (tab);
+	result[i] = 0;
+}
+
+char	**ft_split(char const *str, char c)
+{
+	size_t	word_count;
+	char	**result;
+
+	word_count = ft_count_words(str, c);
+	result = malloc(sizeof(char *) * (word_count + 1));
+	if (!result)
+		return (NULL);
+	ft_allocate_words(result, str, c);
+	return (result);
 }
 
 /* int(main)
