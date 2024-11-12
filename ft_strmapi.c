@@ -6,13 +6,12 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 08:05:30 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 12:20:52 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 09:13:17 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

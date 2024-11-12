@@ -6,11 +6,12 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:48:38 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 12:22:45 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 09:06:35 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	ft_count_words(char const *str, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:08:58 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 10:33:34 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 10:37:39 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,14 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		num = -num;
 	}
-	while (len > 0)
+	if (num == 0)
 	{
-		len--;
-		if (num == 0)
-			return (str);
-		str[len] = (num % 10) + '0';
+		str[0] = '0';
+		return (str);
+	}
+	while (num != 0)
+	{
+		str[--len] = (num % 10) + '0';
 		num /= 10;
 	}
 	return (str);
@@ -58,7 +60,7 @@ char	*ft_itoa(int n)
 /*#include <stdio.h>
 int	main(void)
 {
-	int n = -1234;
+	int n = 0;
 	char *result;
 
 	result = ft_itoa(n);

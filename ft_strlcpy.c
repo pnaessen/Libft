@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 08:53:12 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 08:13:03 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 09:46:56 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
 	while (src[i] != '\0' && i < size - 1)
 	{
 		dst[i] = src[i];
