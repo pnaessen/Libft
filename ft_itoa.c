@@ -39,22 +39,19 @@ char	*ft_itoa(int n)
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
+	str[len--] = '\0';
 	if (num < 0)
 	{
 		str[0] = '-';
 		num = -num;
 	}
-	if (num == 0)
+	while (num > 0)
 	{
-		str[0] = '0';
-		return (str);
-	}
-	while (num != 0)
-	{
-		str[--len] = (num % 10) + '0';
+		str[len--] = (num % 10) + '0';
 		num /= 10;
 	}
+	if (n == 0)
+		str[0] = '0';
 	return (str);
 }
 /*#include <stdio.h>
