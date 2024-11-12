@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:08:26 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/12 13:10:28 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 14:05:41 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ char	*ft_strchr(const char *s, int c)
 /*#include <stdio.h>
 int	main(void)
 {
-	const char *str = "Hello, World";
-	char c = 'o';
+	const char *str = "tripouille";
+	char c = 't';
 
 	char *result = ft_strchr(str, c);
 	if (result)
