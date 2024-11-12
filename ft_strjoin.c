@@ -41,7 +41,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /*#include <stdio.h>
 int	main(void)
 {
-		char    *tab[3] = {"bonjour", "je", "test"};
-		printf("%s", ft_strjoin (3, tab, "\n"));
+		char    *tab = "bonjour je "test";
+		char    *tabs = "bonjour , je test";
+		printf("%s", ft_strjoin (tab, tabs));
 		free(str);
 }*/
