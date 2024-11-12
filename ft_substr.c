@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:14:51 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/12 10:42:47 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/12 13:07:52 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
@@ -37,8 +39,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(void)
 {
 	char *str = "lorem ipsum dolor sit amet";
-	int start = 7;
-	size_t len = 10;
+	int start = 5;
+	size_t len = 4;
 
 	char *substr = ft_substr(str, start, len);
 	if (substr)
