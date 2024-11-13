@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:48:38 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/12 09:06:35 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/13 17:30:07 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,20 +84,18 @@ char	**ft_split(char const *str, char c)
 	ft_allocate_words(result, str, c);
 	return (result);
 }
-
-/* int(main)
+/*int main()
 {
 	char	**tab;
 	int		i;
 
-	tab = ft_split("Hello World", ' ');
+	tab = ft_split("     Tripouille 42  ", ' ');
 	i = 0;
-	while (tab[i] != NULL)
+	while (tab[i])
 	{
 		printf("%s\n", tab[i]);
 		i++;
 	}
 	free(tab);
 	return (0);
-}
-*/
+}*/
