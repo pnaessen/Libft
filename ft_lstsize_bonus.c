@@ -1,43 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:08:26 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 12:26:34 by pnaessen         ###   ########lyon.fr   */
+/*   Created: 2024/11/13 13:51:41 by pnaessen          #+#    #+#             */
+/*   Updated: 2024/11/13 14:32:44 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (lst != NULL)
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)(s + i));
 		i++;
+		lst = lst->next;
 	}
-	if ((unsigned char)c == '\0')
-		return ((char *)(s + i));
-	return (NULL);
+	return (i);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	const char *str = "tripouille";
-	char c = 't';
-
-	char *result = ft_strchr(str, c);
-	if (result)
-		printf("Trouvé '%c': %s\n", c, result);
-	else
-		printf("Pas la '%c'\n", c);
-	return (0);
-}*/

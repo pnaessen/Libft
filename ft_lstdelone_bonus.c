@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 09:24:33 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 12:43:54 by pnaessen         ###   ########lyon.fr   */
+/*   Created: 2024/11/13 14:46:56 by pnaessen          #+#    #+#             */
+/*   Updated: 2024/11/13 14:47:25 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
-	return ;
+    
 }
-/*#include <stdio.h>
-int (int main()
-{
-	char *str[] = "hello zorld";
-	ft_striteri(str, ft_toupper);
-	printf("%s\n", str);
-	return (0);
-}*/

@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 09:24:33 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 12:43:54 by pnaessen         ###   ########lyon.fr   */
+/*   Created: 2024/11/13 14:16:58 by pnaessen          #+#    #+#             */
+/*   Updated: 2024/11/13 14:33:18 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
-	return ;
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
-/*#include <stdio.h>
-int (int main()
-{
-	char *str[] = "hello zorld";
-	ft_striteri(str, ft_toupper);
-	printf("%s\n", str);
-	return (0);
-}*/
