@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 17:31:22 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/14 08:26:34 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/14 15:22:15 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst != NULL)
 	{
 		temp = (*lst)->next;
-		ft_lstdelone(*lst, del);
+		del((*lst)-> content);
+		free(*lst);
 		*lst = temp;
 	}
 	*lst = NULL;
