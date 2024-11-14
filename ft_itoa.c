@@ -6,12 +6,11 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:08:58 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 14:28:10 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/14 08:32:04 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_numlen(int n)
 {

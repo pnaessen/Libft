@@ -6,12 +6,11 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 08:41:05 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 12:27:51 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/14 08:30:30 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

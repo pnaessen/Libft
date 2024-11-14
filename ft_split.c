@@ -5,97 +5,106 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 14:48:38 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 17:30:07 by pnaessen         ###   ########lyon.fr   */
+/*   Created: 2024/11/14 12:04:20 by pnaessen          #+#    #+#             */
+/*   Updated: 2024/11/14 12:23:18 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static size_t	ft_count_words(char const *str, char c)
+static int	ft_count_word(char const *s, char c)
 {
-	size_t	word_count;
+	int		count;
+	int		in_word;
 	size_t	i;
 
-	word_count = 0;
+	count = 0;
+	in_word = 0;
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] != c && (str[i + 1] == c || str[i + 1] == '\0'))
-			word_count++;
-		i++;
-	}
-	return (word_count);
-}
-
-static void	ft_copy_word(char *dest, char const *src, char c)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i] && src[i] != c)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-}
-
-static void	ft_allocate_words(char **result, char const *str, char c)
-{
-	size_t	word_len;
-	size_t	word_index;
-	size_t	i;
-
-	word_index = 0;
-	i = 0;
-	while (str[word_index])
-	{
-		word_len = 0;
-		while (str[word_index + word_len] && str[word_index + word_len] != c)
-			word_len++;
-		if (word_len > 0)
+		if (s[i] != c && in_word == 0)
 		{
-			result[i] = malloc(sizeof(char) * (word_len + 1));
-			if (!result[i])
-				return ;
-			ft_copy_word(result[i], (str + word_index), c);
-			i++;
-			word_index = word_index + word_len;
+			in_word = 1;
+			count++;
 		}
-		else
-			word_index++;
+		else if (s[i] == c)
+			in_word = 0;
+		i++;
 	}
-	result[i] = 0;
+	return (count);
 }
 
-char	**ft_split(char const *str, char c)
+static int	ft_len(char const *s, int i, char c)
 {
-	size_t	word_count;
-	char	**result;
+	int	len;
 
-	if (!str)
-		return (NULL);
-	word_count = ft_count_words(str, c);
-	result = malloc(sizeof(char *) * (word_count + 1));
-	if (!result)
-		return (NULL);
-	ft_allocate_words(result, str, c);
-	return (result);
+	len = 0;
+	while (s[i] && s[i] != c)
+	{
+		len++;
+		i++;
+	}
+	return (len);
 }
-/*int main()
-{
-	char	**tab;
-	int		i;
 
-	tab = ft_split("     Tripouille 42  ", ' ');
+static char	*ft_strndup(char const *s, int i, int size, char c)
+{
+	char	*dup;
+	int		j;
+
+	dup = (char *)malloc(sizeof(char) * (size + 1));
+	if (!dup)
+		return (NULL);
+	j = 0;
+	while (j < size && s[i] && s[i] != c)
+	{
+		dup[j] = s[i];
+		i++;
+		j++;
+	}
+	dup[j] = '\0';
+	return (dup);
+}
+
+static char	**ft_free(char **tab)
+{
+	size_t	i;
+
 	i = 0;
 	while (tab[i])
 	{
-		printf("%s\n", tab[i]);
+		free(tab[i]);
 		i++;
 	}
 	free(tab);
-	return (0);
-}*/
+	return (NULL);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		i;
+	int		j;
+
+	if (!s)
+		return (NULL);
+	result = (char **)malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (j < ft_count_word(s, c))
+	{
+		while (s[i] == c)
+			i++;
+		result[j] = ft_strndup(s, i, ft_len(s, i, c), c);
+		if (!result[j])
+			return (ft_free(result));
+		while (s[i] && s[i] != c)
+			i++;
+		j++;
+	}
+	result[j] = NULL;
+	return (result);
+}
