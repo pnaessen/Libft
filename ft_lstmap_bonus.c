@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 08:53:49 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/15 10:14:56 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 11:58:09 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,23 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
-	t_list	*new_node;
 	t_list	*current;
 
-	if (!lst || !f)
-		return (NULL);
 	new_list = NULL;
-	current = lst;
-	while (current)
+	current = malloc(sizeof(t_list));
+	if (!current || !lst)
+		return (NULL);
+	current->content = f(lst->content);
+	new_list = current;
+	while (lst->next)
 	{
-		new_node = ft_lstnew(f(current->content));
-		if (!new_node)
-		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&new_list, new_node);
-		current = current->next;
+		new_list->next = malloc(sizeof(t_list));
+		if (!new_list->next)
+			return (ft_lstclear(&current, del), NULL);
+		new_list = new_list->next;
+		lst = lst->next;
+		new_list->content = f(lst->content);
 	}
-	return (new_list);
+	new_list->next = NULL;
+	return (current);
 }

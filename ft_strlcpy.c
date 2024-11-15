@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 08:53:12 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/12 09:46:56 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:08:36 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char dst[20];
-	const char *src = "Hello, World";
-	size_t size = 10;
-
-	size_t len = ft_strlcpy(dst, src, size);
-	printf("Chaine : %s\n", dst);
-	printf("Taille de source: %zu\n", len);
-	return (0);
-}*/

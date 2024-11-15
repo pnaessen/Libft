@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:13:58 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/12 10:42:25 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:09:57 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*#include "libft.h"
-
-int	main(void)
-{
-	const char *str = "teste";
-	char c = '\0';
-
-	char *result = ft_strrchr(str, c);
-	if (result)
-		printf("Trouvé '%c': %s\n", c, result);
-	else
-		printf("Pas la '%c'\n", c);
-	return (0);
-}*/

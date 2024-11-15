@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:01:45 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/14 08:31:10 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:08:24 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i + j] = '\0';
 	return (str);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-		char    *tab = "bonjour je "test";
-		char    *tabs = "bonjour , je test";
-		printf("%s", ft_strjoin (tab, tabs));
-		free(str);
-}*/

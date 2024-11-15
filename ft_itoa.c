@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:08:58 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/14 08:32:04 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:09:48 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,3 @@ char	*ft_itoa(int n)
 		str[0] = '0';
 	return (str);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	int n = -2147483648;
-	char *result;
-
-	result = ft_itoa(n);
-	if (result)
-	{
-		printf("ft_itoa(%d) = %s\n", n, result);
-		free(result);
-	}
-	return (0);
-}*/

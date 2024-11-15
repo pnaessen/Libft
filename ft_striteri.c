@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 09:24:33 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 12:43:54 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:08:17 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 	return ;
 }
-/*#include <stdio.h>
-int (int main()
-{
-	char *str[] = "hello zorld";
-	ft_striteri(str, ft_toupper);
-	printf("%s\n", str);
-	return (0);
-}*/

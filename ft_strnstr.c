@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:36:50 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 14:30:18 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:10:02 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char *big = "lorem ipsum dolor sit amet";
-	char *little = "dolor";
-	size_t len = 15;
-
-	char *result = ft_strnstr(big, little, len);
-	if (result)
-		printf("Trouvé: %s\n", result);
-	else
-		printf("Pas la\n");
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 08:12:04 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 08:13:01 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:08:42 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char *str = "Hello";
-	size_t len = ft_strlen(str);
-	printf("Taille '%s': %zu\n", str, len);
-	return (0);
-}*/

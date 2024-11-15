@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:52:33 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 12:48:00 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:10:20 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	char src[] = "Hello, world";
-	char dst[] = "Goodbye";
-
-	ft_memcpy(dst, src, 5);
-	printf("Source: %s\n", src);
-	printf("Destination: %s\n", dst);
-	return (0);
-}*/

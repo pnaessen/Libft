@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 08:05:26 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/12 09:14:31 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:07:17 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (1);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	int i = -1;
-	while (i < 129)
-	{
-		printf("%d = %d\n", i, ft_isprint(i));
-	}
-}*/

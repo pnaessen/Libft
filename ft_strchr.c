@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:08:26 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/13 12:26:34 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:08:09 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (NULL);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	const char *str = "tripouille";
-	char c = 't';
-
-	char *result = ft_strchr(str, c);
-	if (result)
-		printf("Trouvé '%c': %s\n", c, result);
-	else
-		printf("Pas la '%c'\n", c);
-	return (0);
-}*/

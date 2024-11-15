@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:26:21 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/11 08:13:56 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:07:50 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char src[] = "Hello, World!";
-	char dest[50];
-
-	//printf("Avant %s\n", src);
-	//ft_memmove(dest, src, 13);
-	//printf("Après %s\n", dest);
-
-	char overlap[] = "Overlap Test";
-	ft_memmove(overlap + 1, overlap, 2);
-	printf("Après overlap %s\n", overlap);
-
-		char overlapo[] = "Overlap Test";
-	memmove(overlapo + 1, overlapo, 2);
-	printf("Après overlap %s\n", overlapo);
-	return (0);
-}*/

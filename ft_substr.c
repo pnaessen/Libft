@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:14:51 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/14 08:30:47 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 14:09:21 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char *str = "tripouille";
-	int start = 0;
-	size_t len = 42000;
-
-	char *substr = ft_substr(str, start, len);
-	if (substr)
-	{
-		printf("%s\n", substr);
-		free(substr);
-	}
-	return (0);
-}*/
