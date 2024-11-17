@@ -6,12 +6,39 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:04:20 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/14 12:23:18 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/17 18:46:06 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		i;
+	int		j;
+
+	if (!s)
+		return (NULL);
+	result = (char **)malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (j < ft_count_word(s, c))
+	{
+		while (s[i] == c)
+			i++;
+		result[j] = ft_strndup(s, i, ft_len(s, i, c), c);
+		if (!result[j])
+			return (ft_free(result));
+		while (s[i] && s[i] != c)
+			i++;
+		j++;
+	}
+	result[j] = NULL;
+	return (result);
+}
 static int	ft_count_word(char const *s, char c)
 {
 	int		count;
@@ -81,30 +108,3 @@ static char	**ft_free(char **tab)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
-{
-	char	**result;
-	int		i;
-	int		j;
-
-	if (!s)
-		return (NULL);
-	result = (char **)malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
-	if (!result)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (j < ft_count_word(s, c))
-	{
-		while (s[i] == c)
-			i++;
-		result[j] = ft_strndup(s, i, ft_len(s, i, c), c);
-		if (!result[j])
-			return (ft_free(result));
-		while (s[i] && s[i] != c)
-			i++;
-		j++;
-	}
-	result[j] = NULL;
-	return (result);
-}

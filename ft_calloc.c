@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 08:41:05 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/15 14:07:02 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/17 18:45:40 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb > 0 && nmemb * size > SIZE_MAX)
+	if (nmemb > 0 && size > SIZE_MAX / nmemb)
 		return (NULL);
 	ptr = malloc(size * nmemb);
 	if (!ptr)
