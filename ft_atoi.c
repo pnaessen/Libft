@@ -12,38 +12,29 @@
 
 #include "libft.h"
 
-int	ft_overflow(long unsigned nb)
-{
-	if (nb > 9223372036854775807)
-		return (1);
-	return (0);
-}
-
 int	ft_atoi(const char *nptr)
 {
+	size_t			i;
 	int				sign;
-	int				i;
-	long unsigned	nb;
+	unsigned long	nb;
 
-	sign = 1;
 	i = 0;
+	sign = 1;
 	nb = 0;
+	
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
-			sign = -sign;
-		i++;
-	}
+	if (nptr[i] == '-' || nptr[i] == '+')
+		if (nptr[i++] == '-')
+			sign *= -1;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		if (ft_overflow(nb * 10 + (nptr[i] - '0')) && sign == 1)
+		if (((nb * 10) + (nptr[i] - '0')) > 9223372036854775807 && sign == 1)
 			return (-1);
-		if (ft_overflow(nb * 10 + (nptr[i] - '0')) && sign == -1)
+		else if (((nb * 10) + (nptr[i] - '0')) > 9223372036854775807 && sign == -1)
 			return (0);
-		nb = nb * 10 + (nptr[i] - '0');
-		i++;
+		nb = nb * 10 + (nptr[i++] - '0');
 	}
 	return (nb * sign);
 }
+
