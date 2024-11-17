@@ -6,11 +6,13 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:08:58 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/17 18:45:38 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/17 18:52:01 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_numlen(int n);
 
 char	*ft_itoa(int n)
 {
@@ -38,6 +40,7 @@ char	*ft_itoa(int n)
 		str[0] = '0';
 	return (str);
 }
+
 static int	ft_numlen(int n)
 {
 	int	len;

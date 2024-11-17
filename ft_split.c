@@ -6,11 +6,16 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:04:20 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/17 18:46:06 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/17 18:51:23 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_count_word(char const *s, char c);
+static int	ft_len(char const *s, int i, char c);
+static char	*ft_strndup(char const *s, int i, int size, char c);
+static char	**ft_free(char **tab);
 
 char	**ft_split(char const *s, char c)
 {
@@ -39,6 +44,7 @@ char	**ft_split(char const *s, char c)
 	result[j] = NULL;
 	return (result);
 }
+
 static int	ft_count_word(char const *s, char c)
 {
 	int		count;
@@ -107,4 +113,3 @@ static char	**ft_free(char **tab)
 	free(tab);
 	return (NULL);
 }
-

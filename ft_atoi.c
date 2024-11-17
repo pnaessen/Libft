@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:47:15 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/15 13:19:13 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/17 18:54:49 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_overflow(long unsigned nb)
 {
 	if (nb > 9223372036854775807)
-		return (0);
+		return (1);
 	return (0);
 }
 
