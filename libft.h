@@ -6,17 +6,22 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:40:58 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/15 14:09:35 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/12/18 11:33:20 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
+
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -60,6 +65,19 @@ char				*ft_strnstr(const char *big, const char *little,
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+/////////////////gnl
+char				*get_next_line(int fd);
+
+//////////////////////Printf
+int					parse_char(int c);
+int					parse_string(char *str);
+int					parse_int(int n);
+int					parse_unsigned(unsigned int n);
+int					parse_hex(unsigned long int n);
+int					parse_hex_upper(unsigned long int n);
+int					parse_pointer(void *ptr);
+int					parse_format(const char **format, va_list args);
+int					ft_printf(const char *format, ...);
 
 //////////////////////Bonus
 

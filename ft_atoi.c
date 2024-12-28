@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:47:15 by pnaessen          #+#    #+#             */
-/*   Updated: 2024/11/17 18:54:49 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 08:50:05 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	nb = 0;
-	
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
@@ -31,10 +30,10 @@ int	ft_atoi(const char *nptr)
 	{
 		if (((nb * 10) + (nptr[i] - '0')) > 9223372036854775807 && sign == 1)
 			return (-1);
-		else if (((nb * 10) + (nptr[i] - '0')) > 9223372036854775807 && sign == -1)
+		else if (((nb * 10) + (nptr[i] - '0')) > 9223372036854775807
+			&& sign == -1)
 			return (0);
 		nb = nb * 10 + (nptr[i++] - '0');
 	}
 	return (nb * sign);
 }
-
